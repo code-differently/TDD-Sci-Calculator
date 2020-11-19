@@ -20,19 +20,29 @@ public class BasicCalculatorImp implements Calculator{
     }
 
     protected Double add(Double input){
-        return 0.0;
+        Double sum = input + memory.recallCurrentValue();
+        memory.setCurrentValue(sum);
+        return sum;
     }
 
     protected Double subtract(Double input){
-        return 0.0;
+        Double difference = memory.recallCurrentValue() - input;
+        memory.setCurrentValue(difference);
+        return difference;
     }
 
     protected Double multiply(Double input){
-        return 0.0;
+        Double product = memory.recallCurrentValue() * input;
+        memory.setCurrentValue(product);
+        return product;
+
     }
 
     protected Double divide(Double input){
-        return 0.0;
+        Double quotient = memory.recallCurrentValue() / input;
+        memory.setCurrentValue(quotient);
+        return quotient;
+
     }
 
     protected Double sq(Double input){
